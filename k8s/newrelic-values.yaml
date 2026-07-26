@@ -1,0 +1,33 @@
+global:
+  cluster: EPHI-node
+  customSecretName: "newrelic-license"
+  customSecretLicenseKey: "licenseKey"
+  lowDataMode: true
+  privileged: true
+
+newrelic-infrastructure:
+  enabled: true
+nri-metadata-injection:
+  enabled: true
+kube-state-metrics:
+  enabled: true
+nri-kube-events:
+  enabled: true
+newrelic-logging:
+  enabled: true
+newrelic-prometheus-agent:
+  enabled: true
+nr-ebpf-agent:
+  enabled: false
+k8s-agents-operator:
+  enabled: false
+nri-prometheus:
+  enabled: false
+newrelic-pixie:
+  enabled: false
+pixie-chart:
+  enabled: false
+newrelic-infra-operator:
+  enabled: false
+newrelic-k8s-metrics-adapter:
+  enabled: false
