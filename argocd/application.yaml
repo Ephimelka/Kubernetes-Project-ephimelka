@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cloupilot
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Ephimelka/Kubernetes-Project-ephimelka.git
+    targetRevision: main
+    path: helm/cloupilot
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: cloupilot
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
